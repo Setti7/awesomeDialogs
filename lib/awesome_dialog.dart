@@ -13,7 +13,7 @@ export 'src/anims/anims.dart';
 enum DialogType { INFO, WARNING, ERROR, SUCCES, NO_HEADER }
 enum AnimType { SCALE, LEFTSLIDE, RIGHSLIDE, BOTTOMSLIDE, TOPSLIDE }
 
-class AwesomeDialog {
+class AwesomeDialog  extends StatelessWidget {
   /// [@required]
   final BuildContext context;
 
@@ -113,6 +113,9 @@ class AwesomeDialog {
         );
 
   bool isDissmisedBySystem = false;
+
+  @override
+  Widget build(BuildContext context) => _buildDialog;
 
   Future show() => showDialog(
           context: this.context,
